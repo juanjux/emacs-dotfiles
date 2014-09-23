@@ -118,7 +118,6 @@
 (define-key evil-normal-state-map " r" 'helm-recentf)
 (define-key evil-normal-state-map " k" 'helm-show-kill-ring)
 (define-key evil-normal-state-map " o" 'helm-occur)
-(define-key evil-normal-state-map [tab] 'other-window)
 (define-key evil-insert-state-map "º" 'evil-normal-state)
 
 ;; window move
