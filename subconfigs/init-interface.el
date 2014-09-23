@@ -3,16 +3,27 @@
     (scroll-bar-mode -1)
     (tool-bar-mode -1)
 
+;; start scratch in text mode (usefull to get a faster Emacs load time
+;; because it avoids autoloads of elisp modes)
+    (setq initial-major-mode 'text-mode)
+
+;; scratch buffer empty
+    (setq initial-scratch-message nil)
+;;
+    (setq redisplay-dont-pause t)
+
+;; auto-refresh dired
+    (setq global-auto-revert-non-file-buffers t)
+    (setq auto-revert-verbose nil)
+
 ;; enable the column fill mark, globally
     (define-globalized-minor-mode global-fci-mode
       fci-mode (
                 lambda () (fci-mode 1)))
     (global-fci-mode 1)
 
-;; (require 'linum-relative)
-    ;; (after 'linum
-    ;;   (ac-linum-workaround))
-    ;; (global-linum-mode nil)
+;; relative line numbers
+   (global-relative-line-numbers-mode t)
 
 ;; ediff: side-by-side diffs
     (setq ediff-split-window-function 'split-window-horizontally
@@ -37,10 +48,13 @@
 ;; y or n is enough
     (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; no bell
+    (custom-set-variables '(ring-bell-function 'ignore))
+    (setq visible-bell nil)
+
 
 ;; some more interface-related settings
     (setq
-          ring-bell-function (lambda () ())
           read-file-name-completion-ignore-case t
           frame-title-format '("Emacs @ : %b %+%+ %f")
           mouse-yank-at-point t

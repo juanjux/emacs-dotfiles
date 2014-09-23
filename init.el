@@ -22,6 +22,7 @@
 (setq
       delete-by-moving-to-trash t
       create-lockfiles nil
+      gc-cons-threshold 20000000
 )
 
 (custom-set-variables
@@ -34,7 +35,6 @@
  '(display-time-mode t)
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(line-number-mode nil)
- '(show-paren-mode t)
  '(tool-bar-mode nil))
 
 (custom-set-faces
