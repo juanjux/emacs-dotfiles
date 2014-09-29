@@ -3,6 +3,7 @@
 
 (add-to-list 'load-path (expand-file-name "subconfigs" user-emacs-directory))
 (require 'init-packages)
+(require 'init-programming)
 (require 'init-server)
 (require 'init-colors)
 (require 'init-persistence)
@@ -17,13 +18,13 @@
 (require 'init-tags)
 (require 'init-nonevil-bindings)
 (require 'init-misc-plugins)
+(require 'init-org)
 
 ;; some more settings
 (setq
       delete-by-moving-to-trash t
       create-lockfiles nil
-      gc-cons-threshold 20000000
-)
+      gc-cons-threshold 20000000)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

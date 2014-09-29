@@ -23,7 +23,9 @@
     (global-fci-mode 1)
 
 ;; relative line numbers
-   (global-relative-line-numbers-mode t)
+    (add-hook 'prog-mode-hook 'relative-line-numbers-mode t)
+    (add-hook 'prog-mode-hook 'line-number-mode t)
+    (add-hook 'prog-mode-hook 'column-number-mode t)
 
 ;; ediff: side-by-side diffs
     (setq ediff-split-window-function 'split-window-horizontally
@@ -64,14 +66,10 @@
     )
 (blink-cursor-mode -1)
 
-;; non jumpy scrolling => this is really laggy, disabled
-    ;; (require 'smooth-scroll)
-    ;; (smooth-scroll-mode t)
-    ;; (setq smooth-scroll/vscroll-step-size 8)
-    ;; (setq scroll-margin 5
-    ;; (setq linum-delay t)
-    ;; scroll-conservatively 9999
-    ;; scroll-step 1)
+;; non jumpy scrolling
+    (setq scroll-margin 5
+    scroll-conservatively 9999
+    scroll-step 1)
 
 ;; better buffer names for duplicates
     (require 'uniquify)
@@ -105,5 +103,6 @@
                (replace-regexp-in-string "/" "\\"
                                          (file-name-directory
                                           (buffer-file-name)) t t))))
+
 
 (provide 'init-interface)

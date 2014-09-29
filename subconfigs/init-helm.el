@@ -14,6 +14,8 @@
 
 (defun helm-my-buffers ()
   (interactive)
+  (require 'helm-files)
+  (let ((helm-ff-transformer-show-only-basename nil))
   (helm-other-buffer '(helm-c-source-buffers-list
                        helm-c-source-elscreen
                        helm-c-source-occur
@@ -21,6 +23,6 @@
                        helm-c-source-ctags
                        helm-c-source-recentf
                        helm-c-source-locate)
-                     "*helm-my-buffers*"))
+                     "*helm-my-buffers*")))
 
 (provide 'init-helm)

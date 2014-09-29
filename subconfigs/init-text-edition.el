@@ -13,11 +13,10 @@
 ;; dont wrap lines
     (setq-default truncate-lines t)
 
-;; show indent guides
+;; show indent guides ;; DISABLED for the moment, enabled when needed
     (require-package 'indent-guide)
-    (require 'indent-guide)
     (setq indent-guide-recursive nil)
-    (indent-guide-global-mode)
+    ;; (indent-guide-global-mode)
 
 ;; guess indentation settings from buffers
     (require-package 'dtrt-indent)

@@ -170,6 +170,8 @@
 (evil-leader/set-leader ",")
 (evil-leader/set-key "SPC" 'lazy-highlight-cleanup)
 (evil-leader/set-key "SPC" 'evil-search-highlight-persist-remove-all)
+(evil-leader/set-key "ea" 'flycheck-list-errors)   ; <leader>ea show all errors
+(evil-leader/set-key "en" 'flycheck-next-error)    ; <leader>en next errors
 (evil-leader/set-key "f" 'end-of-defun)            ; <leader>f/F end/start of function
 (evil-leader/set-key "F" 'beginning-of-defun)
 (evil-leader/set-key "gof" 'open-explorer-path)    ; open explorer window of buffer path
