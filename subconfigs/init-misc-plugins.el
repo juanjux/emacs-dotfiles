@@ -3,9 +3,6 @@
     (add-hook 'flyspell-mode-hook (lambda ()
                                     (auto-dictionary-mode t)))
 
-;; flyspell on comments
-    (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-
 ;; only one dired buffer
     (require-package 'dired-single)
 
@@ -27,5 +24,4 @@
 ;; ERC
     (setq erc-hide-list '("JOIN" "PART" "QUIT"))
 
-
-(provide 'init-misc-plugins)
+ (provide 'init-misc-plugins)
