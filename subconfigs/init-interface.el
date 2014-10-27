@@ -3,6 +3,7 @@
     (scroll-bar-mode -1)
     (tool-bar-mode -1)
 
+
 ;; start scratch in text mode (usefull to get a faster Emacs load time
 ;; because it avoids autoloads of elisp modes)
     (setq initial-major-mode 'text-mode)
